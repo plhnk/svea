@@ -94,9 +94,9 @@ export default {
       color: 'headline',
       fontFamily: 'display',
       fontWeight: 'initial',
-      lineHeight: 0.98,
+      lineHeight: 0.84,
       letterSpacing: 'initial',
-      fontSize: ['16vw', '10vw', '10vw'],
+      fontSize: ['16vw', '10vw', '21.8vw'],
       //   fontSize: ['6rem', '12rem', '10vw'],
     },
     caps: {

@@ -118,11 +118,9 @@ const IndexPage = () => {
         minHeight: '100vh',
         gridGap: 0,
         gridTemplateRows: ['4rem 4fr 2fr', null, '1fr 4fr 1fr'],
-        gridTemplateColumns: ['2rem 1fr 2rem', null, '1fr 2fr 1fr'],
+        gridTemplateColumns: ['2rem 1fr 2rem', null, '1fr 3fr 1fr'],
         gridTemplateAreas: [
-          '"spaceTopL details spaceTopR" "spaceMiddle img spaceMiddle" "spaceBottomL header spaceBottomR"',
-          '"spaceTopL contentTop spaceTopR" "margin img margin" "spaceBottomL contentBottom spaceBottomR"',
-          '"spaceTopL spaceTop spaceTopR" "spaceMiddle img spaceMiddle" "spaceBottomL content spaceBottomL"',
+          '"spaceTopL details spaceTopR" "spaceMiddleL img spaceMiddleR" "header header header"'
         ],
         '::selection': {
           backgroundColor: 'primary',
@@ -141,11 +139,13 @@ const IndexPage = () => {
       <Header
         content={content.name}
         sx={{
-          alignSelf: ['flex-start', null, 'center'],
-          mb: ['-.5em', null, 'initial'],
+          alignSelf: ['flex-start', null ],
+          mb: ['-.5em', null],
           zIndex: 10,
           gridArea: ['header'],
-          ml: [0, null, 'calc(10vw - .2ch)'],
+          height: '30vh',
+          mt: [0, null, '-29vh'],
+          ml: [0, null, '-.1ch'],
         }}
       />
       <Hero
@@ -158,11 +158,10 @@ const IndexPage = () => {
         text={content.stats}
         sx={{
           gridArea: ['details'],
-          alignSelf: ['flex-start', null, 'flex-end'],
-          ml: [0, null, '10vw'],
+          alignSelf: 'flex-end',
           mt: ['3rem', null, 'initial'],
-          mb: ['6rem', null, 'initial'],
-          maxWidth: [null, null, 360],
+          mb: '1rem',
+          maxWidth: [null, null, '36ch'],
         }}
       />
     </Grid>

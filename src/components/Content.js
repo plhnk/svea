@@ -20,7 +20,7 @@ export default function Content({ image, text, ...props }) {
         }}
         stats={text}
       />
-      <Button
+      {/* <Button
         name="Theme Toggle"
         sx={{
           variant: 'buttons.invisible',
@@ -49,7 +49,7 @@ export default function Content({ image, text, ...props }) {
           }}
           fluid={image}
         />
-      </Button>
+      </Button> */}
     </Flex>
   );
   return component;
