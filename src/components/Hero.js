@@ -2,7 +2,7 @@
 
 import { jsx, Box, useColorMode } from 'theme-ui';
 import { useState } from 'react';
-import Heart from '../components/Heart';
+import Crown from './Crown';
 import Img from 'gatsby-image';
 
 export default function Hero({ imageArray, text, ...props }) {
@@ -42,7 +42,7 @@ export default function Hero({ imageArray, text, ...props }) {
       {...props}
     >
       {image}
-      <Heart
+      <Crown
         onClick={() =>
           setPic(initialPic + 1 > currentImages.length - 1 ? 0 : initialPic + 1)
         }
@@ -62,9 +62,9 @@ export default function Hero({ imageArray, text, ...props }) {
             transition:
               'color .2s ease-in-out, transform .2s cubic-bezier(0.34, 1.56, 0.64, 1)',
           },
-          '&:active > #heart': {
-            animation: 'heartbeat .8s infinite',
-            '@keyframes heartbeat': {
+          '&:active > #crown': {
+            animation: 'crownbeat .8s infinite',
+            '@keyframes crownbeat': {
               '0%': {
                 transform: 'scale( .75 )',
               },
