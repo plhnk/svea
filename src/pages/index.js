@@ -1,13 +1,13 @@
 /** @jsx jsx */
 
-import { useStaticQuery, graphql } from 'gatsby';
-import { jsx, Grid } from 'theme-ui';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Content from '../components/Content';
-import Typography from '../components/Typography';
-import SEO from '../components/SEO';
-import TimeSensitiveTheme from '../components/TimeSensitiveTheme';
+import { useStaticQuery, graphql } from "gatsby";
+import { jsx, Grid } from "theme-ui";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Content from "../components/Content";
+import Typography from "../components/Typography";
+import SEO from "../components/SEO";
+import TimeSensitiveTheme from "../components/TimeSensitiveTheme";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -115,16 +115,17 @@ const IndexPage = () => {
     <Grid
       as="main"
       sx={{
-        minHeight: '100vh',
-        overflowX: 'hidden',
+        minHeight: "100vh",
+        overflowX: "hidden",
         gridGap: 0,
-        gridTemplateRows: ['8rem 4fr 2fr', null, '1fr 4fr 1fr'],
-        gridTemplateColumns: ['2rem 1fr 2rem', null, '1fr 3fr 1fr'],
+        gridTemplateRows: ["2rem 56vh 32vh 10rem", null, "1fr 4fr 1fr"],
+        gridTemplateColumns: ["2rem 1fr 2rem", null, "1fr 3fr 1fr"],
         gridTemplateAreas: [
-          '"spaceTopL details spaceTopR" "spaceMiddleL img spaceMiddleR" "header header header"'
+          '"spaceTop spaceTop spaceTop" "spaceMiddleL img spaceMiddleR" "header header header" "spaceBotL details spaceBotR"',
+          '"spaceTopL details spaceTopR" "spaceMiddleL img spaceMiddleR" "header header header"',
         ],
-        '::selection': {
-          backgroundColor: 'primary',
+        "::selection": {
+          backgroundColor: "primary",
         },
       }}
     >
@@ -140,29 +141,33 @@ const IndexPage = () => {
       <Header
         content={content.name}
         sx={{
-          alignSelf: ['flex-start', null ],
-          mb: ['-.5em', null],
+          alignSelf: ["flex-start", null],
+          mb: ["-.5em", null],
           zIndex: 10,
-          gridArea: ['header'],
-          height: '30vh',
-          mt: ['-15vh', null, '-29vh'],
-          ml: ['.16ch', null, '-.1ch'],
+          gridArea: ["header"],
+          height: "30vh",
+          mt: ["-15vh", null, "-29vh"],
+          ml: [".16ch", null, "-.1ch"],
         }}
       />
       <Hero
         imageArray={imageArray}
         text={content.data.dob}
-        sx={{ gridArea: 'img' }}
+        sx={{ gridArea: "img" }}
       />
       <Content
         image={data.headshot.childImageSharp.fluid}
         text={content.stats}
         sx={{
-          gridArea: ['details'],
-          alignSelf: 'flex-end',
-          mt: ['3rem', null, 'initial'],
-          mb: ['2.5rem', null, '1rem'],
-          maxWidth: [null, null, '36ch'],
+          gridArea: ["details"],
+          alignSelf: "flex-end",
+          justifySelf: ["unset", "flex-end"],
+          position: ["unset", "relative"],
+          top: ["unset", "16rem"],
+          right: ["unset", "-22ch"],
+          mt: ["3rem", null, "initial"],
+          mb: ["4.5rem", null, "1rem"],
+          maxWidth: [null, null, "36ch"],
         }}
       />
     </Grid>

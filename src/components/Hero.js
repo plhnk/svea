@@ -52,8 +52,8 @@ export default function Hero({ imageArray, text, ...props }) {
         }}
         sx={{
           position: 'absolute',
-          right: '-3em',
-          top: 'calc(50% - 3em)',
+          top: ['-3.3em', '-6em'],
+          left: 'calc(50% - 3em)',
           height: '6em',
           width: '6em',
           zIndex: 99,
@@ -92,7 +92,7 @@ export default function Hero({ imageArray, text, ...props }) {
           variant: 'animations.scaleIn',
           animationDelay: '.7s',
         }}
-        content={text}
+        // content={text}
       />
     </Box>
   );

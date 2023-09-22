@@ -41,7 +41,7 @@ export default function Crown({ content, ...props }) {
           },
         }}
       >
-        <path
+        {/* <path
           fill="transparent"
           id="textPath"
           d="M111.5 56a55.5 55.5 0 11-111 0 55.5 55.5 0 01111 0z"
@@ -58,7 +58,7 @@ export default function Crown({ content, ...props }) {
           <textPath alignmentBaseline="top" xlinkHref="#textPath">
             {circleText.repeat(2)}
           </textPath>
-        </text>
+        </text> */}
       </g>
     </svg>
   );
