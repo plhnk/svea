@@ -1,0 +1,16 @@
+data:
+  firstName: &fname Svea
+  secondName: &sname Wilhelmina
+  dob: &dob 13 September 2023
+name:
+  - *fname
+  - *sname
+stats:
+  - *fname
+  - was born on
+  - *dob
+  - weighing
+  - 7.75lb
+  - and measuring
+  - 20"
+  - long.
