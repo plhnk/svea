@@ -117,12 +117,12 @@ const IndexPage = () => {
       sx={{
         minHeight: '100vh',
         gridGap: 0,
-        gridTemplateRows: ['2fr 4fr 2fr', null, '1fr 4fr 1fr'],
-        gridTemplateColumns: ['2rem 1fr 5rem', '1fr 2fr 1fr', '1fr 1fr'],
+        gridTemplateRows: ['4rem 4fr 2fr', null, '1fr 4fr 1fr'],
+        gridTemplateColumns: ['2rem 1fr 2rem', null, '1fr 2fr 1fr'],
         gridTemplateAreas: [
-          '"spaceTopL contentTop spaceTopR" "img img spaceMiddle" "spaceBottomL contentBottom spaceBottomR"',
-          '"spaceTopL contentTop spaceTopR" "img img spaceMiddle" "spaceBottomL contentBottom spaceBottomR"',
-          '"spaceTop spaceTop" "img content" "spaceBottom spaceBottom"',
+          '"spaceTopL details spaceTopR" "spaceMiddle img spaceMiddle" "spaceBottomL header spaceBottomR"',
+          '"spaceTopL contentTop spaceTopR" "margin img margin" "spaceBottomL contentBottom spaceBottomR"',
+          '"spaceTopL spaceTop spaceTopR" "spaceMiddle img spaceMiddle" "spaceBottomL content spaceBottomL"',
         ],
         '::selection': {
           backgroundColor: 'primary',
@@ -141,10 +141,10 @@ const IndexPage = () => {
       <Header
         content={content.name}
         sx={{
-          alignSelf: ['flex-end', null, 'center'],
-          mb: ['-.3em', null, 'initial'],
+          alignSelf: ['flex-start', null, 'center'],
+          mb: ['-.5em', null, 'initial'],
           zIndex: 10,
-          gridArea: ['contentTop', null, 'content'],
+          gridArea: ['header'],
           ml: [0, null, 'calc(10vw - .2ch)'],
         }}
       />
@@ -157,7 +157,7 @@ const IndexPage = () => {
         image={data.headshot.childImageSharp.fluid}
         text={content.stats}
         sx={{
-          gridArea: ['contentBottom', null, 'content'],
+          gridArea: ['details'],
           alignSelf: ['flex-start', null, 'flex-end'],
           ml: [0, null, '10vw'],
           mt: ['3rem', null, 'initial'],

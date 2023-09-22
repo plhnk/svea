@@ -9,7 +9,7 @@ export default function Stats({ stats, ...props }) {
   }, []);
   const statArray = newArray.map((i, index) => (
     <Text
-      as="p"
+      as="span"
       sx={{
         lineHeight: 1.5,
         variant: 'animations.toRight',
@@ -22,13 +22,13 @@ export default function Stats({ stats, ...props }) {
       </Text>
       <Text as="span" sx={{ color: 'muted' }}>
         {i[1]}
-      </Text>
+      </Text> {' '}
     </Text>
   ));
   return (
-    <Box {...props}>
+    <Box as='p' {...props}>
       {statArray}
-      <Link
+      {/* <Link
         target="_blank"
         rel={'noopener noreferrer'}
         sx={{
@@ -56,7 +56,7 @@ export default function Stats({ stats, ...props }) {
             <path d="M18 2h1.5V.5H18V2zm0 16v1.5h1.5V18H18zM2 18H.5v1.5H2V18zM2 2V.5H.5V2H2zm9.333 1.5H18v-3h-6.667v3zM16.5 2v6.667h3V2h-3zm.44-1.06l-11 11 2.12 2.12 11-11L16.94.94zm-.44 10.393V18h3v-6.667h-3zM18 16.5H2v3h16v-3zM3.5 18V2h-3v16h3zM2 3.5h6.667v-3H2v3z" />
           </svg>
         </IconButton>
-      </Link>
+      </Link> */}
     </Box>
   );
 }
