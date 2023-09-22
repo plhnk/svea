@@ -25,8 +25,8 @@ export default function Hero({ imageArray, text, ...props }) {
     <Img
       sx={{
         backgroundColor: `${imagePlaceholder.color}`,
-        maxHeight: ['80vh', null, '67vh'],
-        height: ['80vh', null, '67vh'],
+        maxHeight: ['50vh', null, '67vh'],
+        height: ['50vh', null, '67vh'],
         boxShadow: `${'0 4em 8em -2em ' + imagePlaceholder.color}`,
         variant: 'animations.toRight',
       }}

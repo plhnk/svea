@@ -117,7 +117,7 @@ const IndexPage = () => {
       sx={{
         minHeight: '100vh',
         gridGap: 0,
-        gridTemplateRows: ['4rem 4fr 2fr', null, '1fr 4fr 1fr'],
+        gridTemplateRows: ['8rem 4fr 2fr', null, '1fr 4fr 1fr'],
         gridTemplateColumns: ['2rem 1fr 2rem', null, '1fr 3fr 1fr'],
         gridTemplateAreas: [
           '"spaceTopL details spaceTopR" "spaceMiddleL img spaceMiddleR" "header header header"'
@@ -144,8 +144,8 @@ const IndexPage = () => {
           zIndex: 10,
           gridArea: ['header'],
           height: '30vh',
-          mt: [0, null, '-29vh'],
-          ml: [0, null, '-.1ch'],
+          mt: ['-15vh', null, '-29vh'],
+          ml: ['.16ch', null, '-.1ch'],
         }}
       />
       <Hero
@@ -160,7 +160,7 @@ const IndexPage = () => {
           gridArea: ['details'],
           alignSelf: 'flex-end',
           mt: ['3rem', null, 'initial'],
-          mb: '1rem',
+          mb: ['2.5rem', null, '1rem'],
           maxWidth: [null, null, '36ch'],
         }}
       />

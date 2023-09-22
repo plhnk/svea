@@ -96,7 +96,7 @@ export default {
       fontWeight: 'initial',
       lineHeight: 0.84,
       letterSpacing: 'initial',
-      fontSize: ['16vw', '10vw', '21.8vw'],
+      fontSize: ['40vw', '10vw', '21.8vw'],
       //   fontSize: ['6rem', '12rem', '10vw'],
     },
     caps: {

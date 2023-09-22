@@ -49,7 +49,7 @@ export default function Crown({ content, ...props }) {
         <text
           sx={{
             fill: "textSecondary",
-            fontSize: 12,
+            fontSize: 11,
             letterSpacing: ".23em",
             textTransform: "uppercase",
             textShadow: (theme) => `${"0 0 4em " + theme.colors.background}`,
