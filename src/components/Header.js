@@ -7,7 +7,7 @@ export default function Header({ content, ...props }) {
     <span
       sx={{
         "&:nth-of-type(1)": { ml: ".32ch", lineHeight: [1.1, "unset"] },
-        "&:nth-of-type(2)": { lineHeight: [0.75, "unset"] },
+        "&:nth-of-type(2)": { lineHeight: [0.75, "unset"], inlineSize: ['5ch', 'unset'], overflowWrap: ['break-word', 'unset'] },
         transform: ["translateX(-.3ch)", "translateX(0)"],
         display: "block",
       }}
@@ -38,6 +38,7 @@ export default function Header({ content, ...props }) {
       as="h1"
       sx={{
         variant: "text.display",
+        fontVariantLigatures: 'common-ligatures',
         textShadow: (theme) => `${".2em .2em 1em " + theme.colors.background}`,
       }}
       {...props}

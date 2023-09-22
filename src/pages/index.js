@@ -116,6 +116,7 @@ const IndexPage = () => {
       as="main"
       sx={{
         minHeight: '100vh',
+        overflowX: 'hidden',
         gridGap: 0,
         gridTemplateRows: ['8rem 4fr 2fr', null, '1fr 4fr 1fr'],
         gridTemplateColumns: ['2rem 1fr 2rem', null, '1fr 3fr 1fr'],
