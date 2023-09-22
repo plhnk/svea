@@ -144,7 +144,7 @@ export default {
       },
     },
     toRight: {
-      animation: 'toRight 0.5s cubic-bezier(0.5, 1.35, 0.5, 1) forwards',
+      animation: 'toRight 2s cubic-bezier(0, 0.1, 0.6, 1) forwards',
       transform: 'translateX(-30%)',
       variant: 'animations.core',
       '@keyframes toRight': {

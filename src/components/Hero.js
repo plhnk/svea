@@ -43,9 +43,13 @@ export default function Hero({ imageArray, text, ...props }) {
     >
       {image}
       <Crown
-        onClick={() =>
-          setPic(initialPic + 1 > currentImages.length - 1 ? 0 : initialPic + 1)
-        }
+        // onClick={() =>
+        //   setPic(initialPic + 1 > currentImages.length - 1 ? 0 : initialPic + 1)
+        // }
+        onClick={(e) => {
+          const next = mode === 'dark' ? 'light' : 'dark';
+          setMode(next);
+        }}
         sx={{
           position: 'absolute',
           right: '-3em',

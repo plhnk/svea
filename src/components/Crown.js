@@ -19,7 +19,7 @@ export default function Crown({ content, ...props }) {
     >
       <path
         id="crown"
-        sx={{ transform: "rotate(15deg)", transformOrigin: "unset" }}
+        sx={{ transform: "rotate(0deg)", transformOrigin: "unset" }}
         stroke="currentColor"
         fill="none"
         stroke-linejoin="round"

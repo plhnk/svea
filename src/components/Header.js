@@ -6,8 +6,8 @@ export default function Header({ content, ...props }) {
   const headline = content.map((i, index) => (
     <span
       sx={{
-        "&:nth-of-type(1)": { ml: ".32ch", lineHeight: [1.1, "initial"] },
-        "&:nth-of-type(2)": { lineHeight: [0.75, "initial"] },
+        "&:nth-of-type(1)": { ml: ".32ch", lineHeight: [1.1, "unset"] },
+        "&:nth-of-type(2)": { lineHeight: [0.75, "unset"] },
         transform: ["translateX(-.3ch)", "translateX(0)"],
         display: "block",
       }}
